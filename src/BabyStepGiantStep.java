@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 /**
- * Created by duotao on 11/2/16.
+ * Pretty tricky problem, need to think thoroughly
+ * https://www.hackerrank.com/contests/w25/challenges/baby-step-giant-step
  */
 public class BabyStepGiantStep {
     public static void main(String...args) {
