@@ -26,28 +26,31 @@ public class StoneDivision {
         List<Long> s = new ArrayList<>();
         long n = scn.nextLong(), m = scn.nextInt();
         for (int i = 0; i < m; i++) {
-            s.add(scn.nextLong());
+            Long l = scn.nextLong();
+            if (n % l == 0) {
+                s.add(l);
+            }
         }
-        if (solve(n ,s)) {
+        for (long l : s) {
+            if (l % 2 == 0) {
+                System.out.println("First");
+                return;
+            }
+        }
+        if (solve(n, s)) {
             System.out.println("First");
         } else {
             System.out.println("Second");
         }
+
     }
 
     /*
      * return whether count of division of n using s can be odd
      */
     public static boolean solve(long n, List<Long> s) {
-        // just for efficiency: if there is a way to divide it in even number of pieces
         // the the total number of divisions happen to n will be <even> * <whatever> + 1(this division)
         // the number is assured to be odd, then return true, "the number can have odd count of divisions"
-        for (long l : s) {
-            if (n % l == 0 && l % 2 == 0) {
-                return true;
-            }
-        }
-
         for (long l : s) {
             // if the division can have odd division
             if (n % l == 0 && !solve(n / l, s)) {
