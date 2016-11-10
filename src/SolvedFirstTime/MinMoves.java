@@ -1,3 +1,5 @@
+package SolvedFirstTime;
+
 /**
  * Leetcode contest problem, pretty easy but the idea is intriguing
  * The most important thing to know is that "increment n - 1 element" has the same effect as
