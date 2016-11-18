@@ -1,3 +1,5 @@
+package SolvedFirstTime;
+
 import java.util.Scanner;
 
 /**
